@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_live_root"
+   >
+    <android.opengl.GLSurfaceView
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true" />
+
+    <include  layout="@layout/view_live_content"/>
+
+    <!--歌词提示start-->
+    <include  layout="@layout/view_live_music_lrc"/>
+    <!--歌词提示end-->
+
+
+    <!--底部菜单-->
+   <include layout="@layout/view_show_start_live_button_menu"></include>
+
+</RelativeLayout>

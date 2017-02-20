@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+xmlns:hehe="http://schemas.android.com/apk/res-auto"
+    >
+
+<com.ruziniu.phonelive.widget.LoadUrlImageView
+    android:id="@+id/iv_newest_item_user"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:scaleType="centerCrop"
+    android:layout_margin="3dp"
+    hehe:type="round"/>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginBottom="3dp"
+    android:layout_alignParentBottom="true"
+    android:background="#77000000">
+    <TextView
+        android:layout_alignParentRight="true"
+        android:id="@+id/tv_people_num"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_13"/>
+    <TextView
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_nicheng"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="昵称"
+        android:textColor="@color/white"
+        android:textSize="13dp" />
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/yan"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
+    <com.ruziniu.phonelive.widget.AvatarView
+        android:id="@+id/av_head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="3dp"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

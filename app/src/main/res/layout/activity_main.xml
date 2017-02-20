@@ -1,0 +1,28 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:background="@color/transparent"
+            android:id="@+id/realtabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <com.ruziniu.phonelive.widget.MyFragmentTabHost
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tab_bg"
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
+
+
+</RelativeLayout>

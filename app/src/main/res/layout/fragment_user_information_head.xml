@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@color/global"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_user_container"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/rl_user_center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clickable="true" >
+
+            <include layout="@layout/view_info_detail_data"></include>
+
+
+
+            <ImageView
+                android:id="@+id/iv_info_private_core"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/space_10"
+                android:clickable="true"
+                android:src="@drawable/sixinchat" />
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_hot_new_message"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="3px"
+            android:background="#E2E2E2" />
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_live"
+                style="@style/uset_information_ll"
+               >
+                <TextView
+                    android:id="@+id/tv_info_u_live_num"
+                    android:text="0"
+                    android:textColor="@color/global"
+                    style="@style/user_formation_info" />
+                <TextView
+                    style="@style/user_formation_info"
+                    android:textColor="@color/global"
+                    android:text="@string/user_live" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_following"
+                style="@style/uset_information_ll" >
+                <TextView
+                    android:textColor="@color/global"
+                    android:id="@+id/tv_info_u_follow_num"
+                    style="@style/user_formation_info"
+                    android:text="0" />
+                <TextView
+                    android:textColor="@color/global"
+                    style="@style/user_formation_info"
+                    android:text="@string/following" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_fans"
+                style="@style/uset_information_ll" >
+
+                <TextView
+                    android:textColor="@color/global"
+                    android:id="@+id/tv_info_u_fans_num"
+                    style="@style/user_formation_info"
+                    android:text="0" />
+                <TextView
+                    android:textColor="@color/global"
+                    style="@style/user_formation_info"
+                    android:text="@string/follower" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_user_unlogin"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.ruziniu.phonelive.widget.CircleImageView
+            android:id="@+id/iv_avatar1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space_20"
+            android:contentDescription="@null"
+            android:src="@drawable/null_blacklist"
+            app:border_color="@color/white"
+            app:border_width="3dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_avatar1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space_5"
+            android:text="@string/my_information_unlogin_tips"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18" />
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--顶部菜单-->
+    <LinearLayout
+        android:id="@+id/ll_top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--主播头像观众人数-->
+        <RelativeLayout
+            android:background="@drawable/btn_ticket_labe"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="110dp"
+                android:scaleType="fitCenter"
+                android:layout_height="40dp" />
+            <LinearLayout
+                android:id="@+id/ll_live_room_info"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.ruziniu.phonelive.widget.AvatarView
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="3dp"
+                    android:id="@+id/iv_live_emcee_head"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:border_color="@color/white"
+                    app:border_width="2dip"
+                    />
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_11"
+                        android:text="直播Live"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_gravity="center"
+                        android:id="@+id/tv_live_num"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_14"
+                        android:gravity="center"
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="12dp"
+            android:id="@+id/hl_room_user_list"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"/>
+
+    </LinearLayout>
+    <!--顶部菜单end-->
+
+    <!--映票labe-->
+    <LinearLayout
+        android:id="@+id/ll_yp_labe"
+        android:background="@drawable/btn_ticket_labe"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginLeft="-10dp"
+        android:paddingRight="5dp">
+        <TextView
+            android:paddingLeft="17dp"
+            android:text="牛丸"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="@dimen/text_size_15"
+            android:id="@+id/tv_yingpiao_num"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/room_yingpiao_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!--映票labe end-->
+    <!--映客号-->
+    <TextView
+        android:textSize="@dimen/text_size_14"
+        android:layout_marginRight="10dp"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_live_number"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"/>
+
+    <LinearLayout
+        android:id="@+id/ll_click_lit"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true">
+        <!--弹幕显示-->
+
+        <master.flame.danmaku.ui.widget.DanmakuView
+            android:id="@+id/danmakuView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_above="@id/lv_live_room" />
+
+        <!--聊天listview-->
+        <ListView
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:listSelector="@color/transparent"
+            android:divider="@null"
+            android:id="@+id/lv_live_room"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp">
+        </ListView>
+    </LinearLayout>
+
+    <!--礼物动画显示start-->
+    <LinearLayout
+        android:orientation="vertical"
+
+        android:id="@+id/ll_show_gift_animator"
+        android:layout_marginTop="200dp"
+        android:layout_width="270dp"
+        android:layout_height="100dp">
+
+    </LinearLayout>
+    <!--礼物动画显示end-->
+
+
+</merge>

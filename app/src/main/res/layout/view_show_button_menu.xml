@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <FrameLayout
+        android:layout_marginBottom="10dp"
+        android:id="@+id/fl_bottom_menu"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/ll_bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_live_chat"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_show_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_marginLeft="100dp"
+                    android:id="@+id/iv_live_gift"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_show_liwu"/>
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/iv_live_new_message"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/icon_new"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/iv_live_privatechat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_show_message"/>
+                </RelativeLayout>
+            <!--
+            <ImageView
+                android:id="@+id/iv_connectto_anchor"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_show_live_shar"/>
+                -->
+            <ImageView
+                android:id="@+id/iv_live_shar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_show_shar"/>
+
+            <ImageView
+                android:id="@+id/iv_live_back"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_show_back"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:background="@color/white"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/ll_live_chat_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="7dp"
+            android:id="@+id/tglbtn_danmu_setting"
+            android:background="@drawable/tglbtn_live_danmu_setting"
+            />
+
+        <EditText
+            android:textSize="@dimen/text_size_12"
+            android:padding="4dp"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:textColor="@color/gray"
+            android:paddingLeft="5dp"
+            android:id="@+id/et_live_chat_input"
+            android:layout_weight="12"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:background="@color/global"
+            android:id="@+id/bt_send_chat"
+            android:textColor="@color/white"
+            android:text="@string/sendchat"
+            android:layout_width="70dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</FrameLayout>
+</merge>

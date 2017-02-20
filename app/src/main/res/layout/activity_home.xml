@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+   >
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--头部-->
+            <include layout="@layout/view_home_page_head"></include>
+            <!--选项卡按钮-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:weightSum="4">
+                <TextView
+                    android:id="@+id/tv_home_page_index_btn"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/home"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:textColor="@color/global"
+                    android:id="@+id/tv_home_page_video_btn"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/live"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:textColor="@color/global"
+                    android:id="@+id/tv_home_page_video"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="视频"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:textColor="@color/global"
+                    android:id="@+id/tv_home_page_phone"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="图片"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                style="@style/v_line"></View>
+            <!--直播录像-->
+            <include layout="@layout/view_home_page_video"></include>
+            <!--主页-->
+            <include layout="@layout/view_home_page_index"></include>
+            <!--视频-->
+            <include layout="@layout/view_home_page_uploadvideo"></include>
+            <!--图片-->
+            <include layout="@layout/view_home_page_uploadphone"></include>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <include layout="@layout/view_home_page_bottom_menu"></include>
+
+
+
+</RelativeLayout>

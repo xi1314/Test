@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:background="@color/global"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:gravity="center_horizontal">
+        <!--顶部钻石-->
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <ImageView
+                android:id="@+id/iv_home_page_back"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/icon_arrow_left"
+                android:padding="5dp"
+                android:layout_width="27dp"
+                android:layout_height="27dp" />
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/me_harvest_exchange"/>
+                <TextView
+                    android:id="@+id/tv_home_page_send_num"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </RelativeLayout>
+        <!--头像-->
+        <com.ruziniu.phonelive.widget.AvatarView
+            android:id="@+id/av_home_page_uhead"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/tv_home_page_uname"
+                android:textSize="@dimen/text_size_15"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_home_page_sex"
+                style="@style/live_sex_style" />
+            <ImageView
+                android:id="@+id/iv_home_page_level"
+                style="@style/live_level_style"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_home_page_follow"
+                android:textColor="@color/white"
+                android:text="关注 0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                style="@style/h_line"
+                android:layout_width="1dp"
+                android:layout_height="12dp"></View>
+            <TextView
+                android:id="@+id/tv_home_page_fans"
+                android:textColor="@color/white"
+                android:text="粉丝 0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_home_page_sign"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</merge>

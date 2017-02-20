@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:padding="15dp"
+    >
+
+    <TextView
+        android:id="@+id/tv_dialog_msg"
+        android:textSize="@dimen/text_size_20"
+        android:text="是否退出"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:textColor="@color/gray"
+            android:text="取消"
+            android:id="@+id/btn_dialog_cancel"
+            android:background="@drawable/btn_live_room_pop_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp"></View>
+        <Button
+            android:textColor="@color/gray"
+            android:text="确定"
+            android:id="@+id/btn_dialog_determine"
+            android:background="@drawable/btn_live_room_pop_purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

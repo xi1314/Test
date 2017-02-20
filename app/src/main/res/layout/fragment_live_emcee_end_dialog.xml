@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/create_room_bg">
+    <RelativeLayout
+        android:background="@color/transparent"
+        android:id="@+id/rl_livestop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textColor="@color/backgroudcolor"
+            android:textSize="@dimen/text_size_25"
+            android:layout_marginTop="80dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/liveend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="120dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:text="0"
+                android:id="@+id/tv_live_end_num"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="0"
+                android:id="@+id/tv_live_end_yp_num"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="50dp">
+            <Button
+                android:id="@+id/btn_back_index"
+                android:textColor="@color/backgroudcolor"
+                android:text="@string/gobackindex"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/me_button"
+                android:layout_width="220dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

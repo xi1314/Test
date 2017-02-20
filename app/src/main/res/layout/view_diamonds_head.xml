@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:id="@+id/rl_message"
+        style="@style/option_item_rl" >
+
+        <TextView
+            style="@style/option_item_text"
+            android:text="@string/balance" />
+        <ImageView
+            android:src="@drawable/me_myaccount_reddiamond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_coin"
+            android:layout_marginLeft="4dp"
+            android:textSize="20dp"
+            android:text="0"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_10"
+            android:gravity="right" />
+    </LinearLayout>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        style="@style/option_item_text"
+        android:text="@string/select_pay"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/rl_wxpay"
+            android:layout_marginLeft="10dp"
+            android:background="@color/actionbarbackground"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="70dp">
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_diamond_weixin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="微信支付"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"></View>
+        <RelativeLayout
+            android:id="@+id/rl_alipay"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="70dp"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_diamond_alipay"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:text="支付宝支付"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        style="@style/option_item_text"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tv_payname"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="支付方式:微信支付"/>
+</LinearLayout>
